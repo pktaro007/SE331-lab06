@@ -48,5 +48,18 @@ public class ShoppingCartTest {
         );
     }
 
+    @Test
+    public void testGetTotalShoppingCartPrice(){
+        SelectedProduct sp1 = mock(SelectedProduct.class);
+        SelectedProduct sp2 = mock(SelectedProduct.class);
+
+        when(sp1.getTotalPrice()).thenReturn(1000.0);
+        when(sp2.getTotalPrice()).thenReturn(2000.0);
+
+        ShoppingCart sc = new ShoppingCart(Arrays.asList(sp1,sp2));
+        assertThat(sc.getTotalProductPrice(),is(3000.0));
+    }
+
+
 
 }

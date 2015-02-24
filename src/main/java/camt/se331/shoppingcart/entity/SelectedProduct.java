@@ -8,7 +8,7 @@ public class SelectedProduct {
     Integer amount;
 
     public Double getTotalPrice(){
-        return 0.0;
+        return product.getTotalPrice()*amount;
     }
 
     public SelectedProduct() {

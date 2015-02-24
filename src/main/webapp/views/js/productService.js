@@ -19,4 +19,14 @@ productService.service('totalCalService',function() {
         }
         return output;
     }
+
+    this.getTotalVat = function (products){
+        var output = 0.0;
+
+        for (var index = 0; index < products.length;index++) {
+            var product = products[index];
+            output += parseFloat(product.tax);
+        }
+        return output;
+    }
 })

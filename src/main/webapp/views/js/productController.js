@@ -24,7 +24,8 @@ productMainController.controller('listProductController', ['$scope', '$http', '$
     function ($scope, $http, $rootScope,productService,$route,totalCalService) {
         //$http.get("/product/").success(function (data) {
         var data = productService.query(function(){
-            $scope.totalNetPrice= totalCalService.getTotalNetPrice(data);
+            $scope.totalNetPrice = totalCalService.getTotalNetPrice(data);
+            $scope.totalVat = totalCalService.getTotalVat(data);
             $scope.products = data;
         });
 

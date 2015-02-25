@@ -11,7 +11,8 @@ import java.util.*;
 /**
  * Created by Dto on 2/8/2015.
  */
-
+@Repository
+@Profile("db.simpleDao")
 public class SimpleProductDao implements  ProductDao{
 
     private Set<Product> products;

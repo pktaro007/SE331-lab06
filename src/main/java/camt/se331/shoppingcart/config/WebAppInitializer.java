@@ -18,7 +18,7 @@ import javax.servlet.ServletRegistration.Dynamic;
 import java.io.IOException;
 
 public class WebAppInitializer implements WebApplicationInitializer {
-    String basicConfig = "classpath:/embedSetup.propoties";
+    String basicConfig = "classpath:/embedSetup.properties";
 	public void onStartup(ServletContext servletContext) throws ServletException {
 
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();

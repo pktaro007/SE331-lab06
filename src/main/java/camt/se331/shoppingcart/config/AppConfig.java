@@ -9,10 +9,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
+
 @EnableWebMvc
 @Configuration 
 @ComponentScan(basePackages = {"camt.se331.shoppingcart"})
 @EnableAspectJAutoProxy
+@Import({PersistenceContext.class})
 
 public class AppConfig extends WebMvcConfigurerAdapter {
     @Override
